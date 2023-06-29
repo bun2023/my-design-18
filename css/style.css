@@ -1,0 +1,924 @@
+@charset "utf-8";
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:14px;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+* {
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family:  'Noto Serif JP', serif, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック";
+  /* background: rgba(3, 25, 80, 0.776); */
+  /* background: #8cd8ec; */
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+
+/* =====================
+共通設定
+======================*/
+section {
+  padding: 5rem 8% 10rem;
+}
+
+
+.heading {
+  font-size: 3rem;
+  padding: 2rem;
+  text-align: center;
+  letter-spacing: .1rem;
+}
+
+.btn {
+  background: none;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.btn:hover {
+  opacity: .7;
+}
+
+.body-btn {
+  padding: .3rem 3rem;
+  background: #fff;
+  border: .1rem solid #242424;
+  cursor: pointer;
+}
+
+.body-btn:hover {
+  opacity: .7;
+}
+
+/* =====================
+header
+======================*/
+.header-area {
+  padding: 0 8%;
+  border-bottom: .1rem solid #ddd;
+}
+
+
+.header-area .header-top ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+  border-bottom: .1rem solid #ddd;
+}
+
+.header-area .header-top li  {
+  margin-left: 1.2rem;
+}
+
+.header-area .header-top a {
+  color: #242424;
+  cursor: pointer;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.header-area .header-top a:hover {
+  opacity: .7;
+}
+
+.header-area .header-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+}
+
+.header-area .header-nav li {
+  margin-left: 1.2rem;
+}
+
+.header-area .header-nav a {
+  color: #242424;
+  font-size: 1.5rem;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.header-area .header-nav a:hover {
+  opacity: .7;
+}
+
+
+
+.header-area .header-nav img {
+  width: 300px;
+  
+}
+/* =====================
+key-visual
+======================*/
+.swiper {
+  height: 100%;
+}
+
+.swiper-slide {
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-text {
+  color: #fff;
+  left: 5%;
+  position: absolute;
+  top: 25%;
+  width: 50%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, .1);
+}
+
+.swiper-title {
+  font-size: clamp(1.2rem, 3vw, 4rem);
+}
+.sub-title {
+  font-size: clamp(1.2rem, 3vw, 1rem);
+  margin-bottom: 1%;
+}
+
+.swiper-desc {
+  font-size: clamp(12px, 2vw, 1.6rem);
+  line-height: 2;
+  margin-top: 3%;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: #fff;
+}
+
+/* ページネーションのサイズと色 */
+.swiper-pagination-bullet {
+  background-color: #fff;
+  /* height: 1.5rem; */
+  /* width: 1.5rem; */
+}
+
+/* ページネーションの余白 */
+/* .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 .5rem .5rem;
+} */
+
+/* =====================
+sec01
+======================*/
+.sec01 {
+  padding-top: 5rem;
+}
+
+.sec01 .infobox {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.sec01 .info-left h3 a {
+  font-size: 1.5rem;
+  border-bottom: 3px solid #ddd;
+}
+
+.sec01 .info-left li {
+  padding: .2rem;
+  margin: .5rem;
+}
+
+.sec01 .info-left a {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #242424;
+}
+
+.sec01 .info-right h3 a {
+  font-size: 1.5rem;
+  border-bottom: 3px solid #ddd;
+}
+
+.sec01 .info-right li {
+  padding: .2rem;
+  margin: .5rem;
+}
+
+.sec01 .info-right a {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #242424;
+}
+
+
+/* =====================
+sec02
+======================*/
+
+.sec02 .list-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.2rem;
+}
+
+.sec02 .list-box {
+  border: .1rem solid #ddd;
+}
+
+
+.sec02 .list-box a {
+  display: flex;
+  /* align-items: center; */
+  text-align: center;
+}
+
+.sec02 .list-box .list-text {
+  margin: .2rem;
+}
+
+.sec02 .list-box h3 {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #242424;
+}
+
+.sec02 .list-text i {
+  margin: 0 .5rem;
+}
+
+.sec02 .list-text p {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #242424;
+}
+
+
+.sec02 .list-box img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+
+/* 
+.sec02 .list-text .small {
+  width: 45px;
+  height: 45px;
+} */
+
+
+
+
+
+/* =====================
+sec03
+======================*/
+.sec03 .consultation-area {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  letter-spacing: .1rem;
+}
+
+
+.sec03 .consultation-list h3 {
+  font-size: 1.5rem;
+  line-height: 2;
+  border-bottom: 3px solid #ddd;
+}
+
+.sec03 .consultation-list a {
+  font-size: 1.3rem;
+  line-height: 2;
+  color: #242424;
+}
+
+.sec03 .consultation-list iframe {
+  width: 100%;
+}
+
+.sec03 .consultation-list p {
+  font-size: 1.3rem;
+  line-height: 2;
+  margin-bottom: .5rem;
+  /* color: #242424; */
+}
+
+
+
+.sec03 .consultation-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.sec03 .consultation-right a {
+  color: #242424;
+  font-weight: bold;
+  border-bottom: 3px solid #ddd;
+}
+
+.sec03 .consultation-right a:hover {
+  opacity: .7;
+}
+
+.sec03 .consultation-right h3 {
+  font-size: 1.5rem;
+  line-height: 2;
+  border-bottom: 3px solid #ddd;
+}
+
+.sec03 .consultation-right p {
+  font-size: 1.3rem;
+  line-height: 2;
+}
+
+/* .sec03 .consultation-list img {
+  width: 250px;
+} */
+
+
+/* =====================
+sec04
+======================*/
+.sec04 .item-area {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.sec04 .item-box01 {
+  background-image: url(../img/DM_20230622231831_015.JPEG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 200px;
+  text-align: center;
+  padding-top: 27%;
+}
+
+.sec04 .item-box01 h3 {
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 100;
+  color: #fff;
+  background: rgba(0, 0, 0, .5);
+}
+
+.sec04 .item-box01 p {
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 100;
+  color: #fff;
+  background: rgba(0, 0, 0, .5);
+}
+
+.sec04 .item-box02 {
+  background-image: url(../img/DM_20230622231831_019.JPEG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 200px;
+  text-align: center;
+  padding-top: 27%;
+}
+
+
+.sec04 .item-box02 h3 {
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 100;
+  color: #fff;
+  background: rgba(0, 0, 0, .5);
+}
+
+.sec04 .item-box02 p {
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.sec04 .item-box03 {
+  background-image: url(../img/DM_20230622231831_004.JPEG);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 200px;
+  text-align: center;
+  padding-top: 50%;
+}
+
+.sec04 .item-box04 {
+  background-image: url(../img/DM_20230622231831_033.JPEG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 200px;
+  text-align: center;
+  padding-top: 38%;
+}
+
+
+.sec04 .item-box04 h3 {
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 100;
+  color: #fff;
+  background: rgba(0, 0, 0, .5);
+}
+/* 
+.sec04 .item-box04 p {
+  font-size: 1.5rem;
+  line-height: 2;
+} */
+
+.sec04 .item-box img {
+  width: 200px;
+}
+
+/* =====================
+.sec05
+======================*/
+.sec05 .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  letter-spacing: .1rem;
+}
+
+.sec05 .info-area dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sec05 .info-area dt {
+  width: 30%;
+  font-size: 1.2rem;
+  line-height: 2;
+  /* letter-spacing: .1rem; */
+}
+
+.sec05 .info-area span {
+  margin-left: 1.2rem;
+  background: #ddd;
+}
+.sec05 .info-area dd {
+  width: 70%;
+  font-size: 1.2rem;
+  line-height: 2;
+  /* letter-spacing: .1rem; */
+}
+
+.sec05 .info-right {
+  display: flex;
+  gap: 1.5rem;
+  /* align-items: center; */
+}
+
+.sec05 .info-right h3 {
+  font-size: 1.5rem;
+  line-height: 2;
+  /* letter-spacing: .1rem; */
+}
+
+.sec05 .info-right a {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #242424;
+  /* letter-spacing: .1rem; */
+}
+
+.sec05 .body-btn {
+  margin: 5rem 0 1.5rem 0;
+}
+
+.sec05 .info-right a:hover {
+ opacity: .7;
+}
+
+
+
+.sec05 .info-right img {
+  width: 300px;
+  object-fit: cover;
+}
+
+/* =====================
+sec06
+======================*/
+
+.sec06 .about-item01 {
+  background-image: url(../img/DM_20230622231831_044.JPEG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 450px;
+}
+
+.sec06 .about-item01 {
+  display: flex;
+  align-items: center;
+}
+
+.sec06 .about-body01 {
+  margin-left: 5rem;
+  color: #fff;
+}
+
+.sec06 .about-item01 h4 {
+  font-size: 2rem;
+  line-height: 2;
+}
+
+.sec06 .about-item01 h3 {
+  font-size: 3rem;
+  line-height: 2;
+}
+.sec06 .about-item01 p {
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.sec06 .about-item01 a {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sec06 .about-item01 a:hover {
+  opacity: .7;
+}
+
+.sec06 .about-item01 + .about-item02 {
+  margin-top: 5rem;
+}
+
+.sec06 .about-item02 {
+  background-image: url(../img/DM_20230622231831_047.JPEG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 450px;
+}
+
+.sec06 .about-item02 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+} 
+
+.sec06 .about-body02 {
+  margin-right: 5rem;
+} 
+
+.sec06 .about-body02 p {
+  margin: .5rem;
+  padding: 1.2rem;
+} 
+
+.sec06 .about-body02 a {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #242424;
+  font-weight: bold;
+  border-bottom: 3px solid #fff;
+} 
+
+.sec06 .about-body02 a:hover {
+  color: #fff;
+} 
+
+.sec06 .fa-check {
+  color: red;
+  margin-right: .5rem;
+}
+
+.sec06 .about-entry {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 5rem;
+}
+
+.sec06 .entry-list a {
+  color: #242424;
+  cursor: pointer;
+}
+
+.sec06 .entry-list a:hover {
+  opacity: .7;
+}
+
+.sec06 .entry-body p {
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.sec06 .about-entry img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.sec06 .hospital-title {
+  font-size: 2rem;
+  margin: 3rem 0 1.1rem;
+}
+
+.sec06 .hospital-lists ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sec06 .hospital-lists a {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #242424;
+  cursor: pointer;
+  letter-spacing: .1rem;
+}
+
+.sec06 .hospital-lists a:hover {
+  opacity: .7;
+}
+
+.sec06 .fa-window-restore {
+  margin-left: .5rem;
+}
+
+/* =====================
+footer
+======================*/
+
+.footer {
+  padding: 2rem 8%;
+  letter-spacing: .1rem;
+}
+
+.footer .footer-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .footer-item01 h3 {
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.footer .footer-item01 li {
+  font-size: 1.3rem;
+  line-height: 2;
+}
+
+.footer .footer-item01 li:nth-child(4) {
+  margin-top: 0;
+}
+
+.footer .footer-item01 li:nth-child(5) {
+  margin-top: 0;
+}
+
+.footer .footer-item01 li + li {
+  margin-top: 1.2rem;
+}
+
+
+
+
+.footer .footer-item02 h3 {
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+
+.footer .footer-item02 p {
+  font-size: 1.3rem;
+  line-height: 2;
+}
+
+.footer .footer-item02 .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.footer .footer-item02 li + li {
+  margin-top: 1.2rem;
+}
+
+
+.footer .footer-item02 li:nth-child(3) {
+  margin-top: 0;
+}
+
+.footer .footer-item02 li:nth-child(4) {
+  margin-top: 0;
+}
+
+.footer .footer-item02 li:nth-child(6) {
+  margin-top: 0;
+}
+
+.footer .footer-item02 li:nth-child(7) {
+  margin-top: 0;
+}
+
+.footer .footer-item02 li:nth-child(9) {
+  margin-top: 0;
+}
+
+.footer .footer-item02 li:nth-child(10) {
+  margin-top: 0;
+}
+
+.footer .footer-item03 a {
+  font-size: 1.3rem;
+  line-height: 2;
+  color: #242424;
+}
+
+
+.footer .fa-window-restore {
+  margin-left: .5rem;
+}
+
+.footer img {
+  width: 300px;
+}
+
+.footer .footer-copy {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* =====================
+レスポンシブ対応
+======================*/
+@media (max-width: 768px) {
+
+  section {
+    padding-bottom: 2rem;
+  }
+
+
+  .sec01 .infobox {
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+
+  .swiper-text {
+    top: 10%;
+  }
+
+  .sp-only {
+    display: none;
+  }
+
+  .sec03 .consultation-area {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+
+  .sec04 .item-area {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sec05 .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+
+  .sec06 .about-entry {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .sec06 .hospital-lists ul {
+    flex-wrap: wrap;
+  }
+
+
+  .footer .footer-area {
+    display: block;
+    text-align: center;
+  }
+
+
+}
+
+
+/* =====================
+
+======================*/
+
+
+
+/* =====================
+
+======================*/
+
+
+
+/* =====================
+
+======================*/
+
+
